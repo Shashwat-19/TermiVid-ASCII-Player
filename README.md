@@ -144,7 +144,29 @@ class ASCIIConverter:
 
 ---
 
+## 📚 Documentation
 
+Comprehensive documentation for this project is available on [Hashnode](https://hashnode.com/@Shashwat56).
+
+> At present, this README serves as the primary source of documentation.
+
+## 📜 License
+
+This project is distributed under the MIT License.  
+For detailed licensing information, please refer to the [LICENSE](./LICENSE) file included in this repository.
+
+## 📩 Contact  
+### Shashwat  
+**Java Developer | Cloud & NoSQL Enthusiast**  
+
+🔹 **Java** – OOP, Backend Systems, APIs, Automation  
+🔹 **Cloud & NoSQL** – Docker, AWS, MongoDB, Firebase Firestore  
+🔹 **UI/UX Design** – Scalable, user-focused, and visually engaging apps  
+
+---
+
+## 🚀 Open Source | Tech Innovation  
+Building robust applications and leveraging cloud technologies for high-performance solutions.
 
 
 
