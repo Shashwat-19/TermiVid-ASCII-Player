@@ -38,16 +38,14 @@ TermiVid ASCII Player is a **lightweight, terminal-based video player** that tra
 
 ## ✨ **Key Features**
 
-- **Video to ASCII Conversion** — Real-time conversion of video frames to ASCII characters
-- **Optimized Performance** — Efficient frame processing with customizable quality settings
-- **Playback Controls** — Play, pause, seek, and adjust playback speed
-- **Dynamic Resizing** — Automatically adjusts to terminal size with manual override options
-- **Character Mapping** — Multiple ASCII character sets for different visual styles
-- **Audio Sync** — Optional audio playback alongside ASCII video (system dependent)
-- **Responsive Design** — Adapts to different terminal sizes and aspect ratios
-- **Format Support** — Supports MP4, AVI, MOV, MKV, and other common video formats
-- **Customizable Settings** — Adjustable frame rate, contrast, brightness, and character density
-- **Cross-Platform** — Works seamlessly across different operating systems and terminal emulators
+- **🎬 Video to ASCII Conversion** — Real-time conversion of video frames to ASCII characters
+- **⚡ Optimized Performance** — Efficient frame processing with customizable quality settings
+- **📏 Dynamic Resizing** — Automatically adjusts to terminal size with manual override options
+- **🎨 Character Mapping** — Multiple ASCII character sets for different visual styles
+- **📱 Responsive Design** — Adapts to different terminal sizes and aspect ratios
+- **🎯 Format Support** — Supports MP4, AVI, MOV, MKV, and other common video formats
+- **⚙️ Customizable Settings** — Adjustable frame rate, contrast, brightness, and character density
+- **🖥️ Cross-Platform** — Works seamlessly across different operating systems and terminal emulators
 
 ---
 
@@ -55,30 +53,20 @@ TermiVid ASCII Player is a **lightweight, terminal-based video player** that tra
 
 ### **Prerequisites**
 - Python 3.7 or higher
-- pip package manager
-- FFmpeg (for video processing)
+- pip package manager  
 
-### **Install FFmpeg**
+### **Dependencies**
+Before running TermiVid ASCII Player, ensure the following Python libraries are installed:  
 
-**Windows:**
-```bash
-# Using Chocolatey
-choco install ffmpeg
-
-# Or download from https://ffmpeg.org/download.html
+```python
+import cv2
+import os
+import time
+import numpy as np
+import argparse
+import shutil
 ```
 
-**macOS:**
-```bash
-# Using Homebrew
-brew install ffmpeg
-```
-
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt update
-sudo apt install ffmpeg
-```
 
 ### **Install TermiVid**
 
@@ -88,26 +76,6 @@ sudo apt install ffmpeg
    cd TermiVid
    ```
 
-2. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Make Executable (Linux/macOS):**
-   ```bash
-   chmod +x termivid.py
-   ```
-
-### **Dependencies**
-```
-opencv-python>=4.5.0
-numpy>=1.19.0
-Pillow>=8.0.0
-pygame>=2.0.0  # Optional: for audio playback
-colorama>=0.4.4  # For Windows color support
-click>=7.0  # For CLI interface
-```
-
 ---
 
 ## 💻 **Usage Examples**
@@ -115,67 +83,24 @@ click>=7.0  # For CLI interface
 ### **Basic Playback**
 ```bash
 # Play a video file
-python3 main.py vid.mp4
+python termivid.py path/to/your/video.mp4
+
+# Or if made executable
+./termivid.py path/to/your/video.mp4
 ```
 
-### **Python API Usage**
-```python
-from termivid import ASCIIPlayer
-
-# Create player instance
-player = ASCIIPlayer(
-    width=100,
-    charset='medium',
-    fps=24
-)
-
-# Load and play video
-player.load_video('path/to/video.mp4')
-player.play()
-
-# Or use as context manager
-with ASCIIPlayer() as player:
-    player.load_video('video.mp4')
-    player.play()
-```
-
----
 
 ## 🏗️ **Project Architecture**
 
 ### **File Structure**
 ```
 TermiVid/
-├── src/
-│   ├── termivid/
-│   │   ├── __init__.py
-│   │   ├── player.py          # Main player class
-│   │   ├── converter.py       # Video to ASCII conversion
-│   │   ├── display.py         # Terminal display management
-│   │   ├── audio.py           # Audio playback handler
-│   │   └── utils.py           # Utility functions
-├── examples/
-│   ├── basic_usage.py
-│   ├── custom_charset.py
-│   └── batch_convert.py
-├── tests/
-│   ├── test_converter.py
-│   ├── test_player.py
-│   └── test_utils.py
-├── assets/
-│   ├── charsets/              # ASCII character sets
-│   └── sample_videos/         # Test video files
-├── docs/
-│   ├── API.md
-│   ├── CONFIGURATION.md
-│   └── TROUBLESHOOTING.md
-├── termivid.py               # Main CLI entry point
-├── requirements.txt
-├── setup.py
-├── README.md
-└── LICENSE
+├── main.py                      # Main script with all functionality
+├── requirements.txt             # Project dependencies
+├── README.md                    # Project documentation
+├── LICENSE                      # License file
+└── vid.mp4                      # Sample video
 ```
-
 ### **Core Components**
 
 #### **1. ASCIIConverter (`converter.py`)**
