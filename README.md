@@ -2,6 +2,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=00FF41&background=FFFFFF00&center=true&vCenter=true&width=600&lines=TermiVid+ASCII+Player;Watch+%E2%80%A2+Convert+%E2%80%A2+Terminal" alt="TermiVid Banner" />
 </div>
 
+[![Security Policy](https://img.shields.io/badge/Security-Policy-blue?logo=github&logoColor=white)](./SECURITY.md)
 [![GitHub stars](https://img.shields.io/github/stars/your-username/TermiVid?style=social)](https://github.com/your-username/TermiVid/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/your-username/TermiVid?style=social)](https://github.com/your-username/TermiVid/network)
 [![GitHub issues](https://img.shields.io/github/issues/your-username/TermiVid)](https://github.com/your-username/TermiVid/issues)
