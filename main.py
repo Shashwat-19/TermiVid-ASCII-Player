@@ -1,7 +1,6 @@
 import cv2
 import os
 import time
-import numpy as np
 import argparse
 import shutil
 
