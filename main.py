@@ -4,6 +4,7 @@ import time
 import argparse
 import shutil
 
+#This function converts a frame to ASCII art using a character set based on brightness
 def convert_frame_to_ascii(frame, width):
     """
     Convert a frame to ASCII art using a character set based on brightness
